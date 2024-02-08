@@ -18,6 +18,14 @@
                 <input type="text" class="form-control" name="title">
             </div>
 
+            <label for="category_id" class="form-label">Categoria de la tarea</label>
+            <select name="category_id" class="form-select">
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+            </select>
+
+
             <button type="submit" class="btn btn-primary">Crear nueva tarea</button>
             
         </form>
